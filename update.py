@@ -77,11 +77,11 @@ def main():
         if response.status_code == 404:
             raise RuntimeError
     except (requests.exceptions.RequestException, RuntimeError):
-        print('Portainer URL invalid!')
+        print('The Portainer URL is invalid!')
         exit(2)
 
     if response.status_code == 422:
-        print("Portainer credentials areinvalid!")
+        print("The Portainer credentials are invalid!")
         exit(3)
 
     session.headers['Authorization'] = 'Bearer %s' % response.json()['jwt']
@@ -109,8 +109,8 @@ def main():
     # 3. Force service update
     # -----------------------
 
-    # The complete spec must be sent, partial fields to not work
-    # Increment the 'ForceUpdate' field to trigget a forced update
+    # The complete spec must be sent, partial fields do not work
+    # Increment the 'ForceUpdate' field to trigger a forced update
     spec['TaskTemplate']['ForceUpdate'] += 1
 
     print('Triggering forced service update...')
