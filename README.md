@@ -17,9 +17,9 @@ can be configured with environment variables:
 
 Exit Codes:
 
-0: Update triggered with success.
-1: Missing environment variables
-2: Portainer API not reachable (maybe URL is invalid?)
-3: Invalid portainer credentials
-4: Service not found
-5: Update failed
+- **0**: Update triggered with success.
+- **1**: Missing environment variables
+- **2**: Portainer API not reachable (maybe URL is invalid?)
+- **3**: Invalid portainer credentials
+- **4**: Service not found
+- **5**: Update failed
