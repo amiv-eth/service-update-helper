@@ -3,8 +3,8 @@
 [Portainer](portainer.readthedocs.io) is a useful tool to manage docker swarm
 clusters, but the API to update services requires quite a lot of steps.
 
-This script handles everything needed to trigget a forced update of a service,
-(which also causes nodes to pull new images, e.g. newer 'latest' images) and
+This script handles everything needed to trigger a forced update of a service
+(which also causes nodes to pull new images, e.g. newer 'latest' images), and
 can be configured with environment variables:
 
 - `CI_DEPLOY_URL`: The URL of the
