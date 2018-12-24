@@ -54,6 +54,8 @@ def main():
     if error:
         exit(1)
 
+    session.headers['Authorization'] = token
+
     # 1. Update the service
     # ---------------------
 
@@ -79,6 +81,8 @@ def main():
         print("Failed: Could not update the service '%s'! (Error %i)" % (service, update.status_code))
         exit(6)
 
+    print(update.status_code)
+    print(update.text)
     print('Success!')
 
 
