@@ -81,8 +81,6 @@ def main():
         print("Failed: Could not update the service '%s'! (Error %i)" % (service, update.status_code))
         exit(6)
 
-    print(update.status_code)
-    print(update.text)
     print('Success!')
 
 
