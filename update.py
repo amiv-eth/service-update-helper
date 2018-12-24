@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Docker Service Update Helper.
+"""Cluster Service Update Helper
 
-This script handles everything needed to trigget a forced update of a service,
+This script handles everything needed to trigger a forced update of a service,
 (which also causes nodes to pull new images, e.g. newer 'latest' images) and
 can be configured with environment variables:
 
@@ -69,7 +69,7 @@ def main():
     if update.status_code == 401:
         print('Failed: The authorization token is invalid!')
         exit(3)
-    elif update.status_code == 403
+    elif update.status_code == 403:
         print("Failed: Updating the service '%s' is not allowed!" % service)
         exit(4)
     elif update.status_code == 404:
